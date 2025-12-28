@@ -1,0 +1,168 @@
+/* Add Google Fonts at the very top */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: #f4f4f4;
+    background-color: #0f172a;
+}
+
+header {
+    background: #1e293b;
+    padding: 1rem 5%;
+    position: sticky;
+    /*sticks to top while scrolling*/
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: #38bdf8;
+    /* Bright blue for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)),
+        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1000&q=80');
+    background-size: cover;
+    padding: 0 20px;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background: #38bdf8;
+    color: #0f172a;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #7dd3fc;
+}
+
+/* 4. Services Section (Using Flexbox) */
+#services {
+    padding: 50px 5%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /*  */
+    gap: 20px;
+}
+
+.service-box {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    border: 1px solid #334155;
+}
+
+/* 5. Portfolio Section */
+#portfolio {
+    padding: 50px 5%;
+    background: #1e293b;
+}
+
+.project-card {
+    background: #0f172a;
+    padding: 20px;
+    border-left: 5px solid #38bdf8;
+    margin-top: 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 5%;
+}
+
+
+
+.skill-card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    /* The "magic" for animations */
+}
+
+.skill-card:hover {
+    border-color: #38bdf8;
+    transform: translateY(-5px);
+    /* Moves up slightly on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Section Styling */
+#contact {
+    padding: 100px 5%;
+    text-align: center;
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+}
+
+/* Add a smooth scroll effect to the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 6. Mobile Responsiveness */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #services {
+        flex-direction: column;
+        align-items: center;
+    }
+}
